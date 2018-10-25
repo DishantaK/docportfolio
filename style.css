@@ -1,0 +1,135 @@
+body{
+    padding: 10px;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+}
+header{
+    height: 75px;
+    font-size: 1.2em;
+    
+}
+main {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: repeat(4, 1fr);
+    grid-gap: 10px;
+    color: #fff;
+    
+}
+div {
+    height: 200px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+   
+    
+}
+a {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(19, 15, 15, 0.3);
+    background-blend-mode: darken;
+    text-decoration: none;
+    color: #fff;
+    transition: ease-in-out 2s;
+}
+a:hover {
+    background-color: rgba(19, 15, 15, 0.9);
+    transform: inherit;
+}
+p {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    height: 100%;
+}
+/* Initial Sizes */
+.one, .four {
+    grid-row: span 1;
+    grid-column: span 2;
+}
+
+.two, .three, .five, .six {
+    grid-row: span 1;
+    grid-column: span 1;
+}
+
+/* Background Images */
+
+
+.one{
+    background: url('images/doc.PNG');
+    background-size: cover;
+    background-position: center;
+}
+.two{
+    background: url('images/simplicity.PNG');
+    background-size: cover;
+    background-position: center;
+}
+.three{
+    background: url('images/thepics.PNG');
+    background-size: cover;
+    background-position: center;
+}
+.four{
+    background: url('images/portfolio.PNG');
+    background-size: cover;
+    background-position: center;
+}
+.five{
+    background: url('images/beh.PNG');
+    background-size: cover;
+    background-position: center;
+}
+.six{
+    background: url('images/fancypants.PNG');
+    background-size: cover;
+    background-position: center;
+}
+
+@media only screen and (min-width:600px){
+    
+    /* Desktop Sizes */
+
+    main{
+        grid-template-columns: repeat(4,1fr) ;
+        grid-template-rows:  repeat(3,1fr);
+    }
+    div {
+    }
+    .one{
+        grid-row: 1/3 ;
+        grid-column: span 2;
+        height: auto;
+        background-position-y: 50%;
+   
+    }
+    .two{
+        grid-column: span 2 ;
+        grid-row: span 1 ;
+    }
+    .three, {
+        grid-column: span 1;
+        grid-row: span 1 ;
+    }
+    .four{
+        grid-column: span 1;
+        grid-row: span 2;
+        height: auto;
+        background-position-x: -350%;
+    }
+    .five {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .six{
+        grid-column: span 2;
+        grid-row: span 1 ;
+    }
+
+}
